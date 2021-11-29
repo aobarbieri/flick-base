@@ -49,3 +49,7 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 Tools used in the project:
 - Tailwind
 - Typescript
+- FontAwesome
+- React Slick
+    React slick is a carousel component built with React.
+    https://github.com/akiran/react-slick and https://react-slick.neostack.com/

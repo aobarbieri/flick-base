@@ -1,54 +1,73 @@
-import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React, { useState } from 'react';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faCaretDown } from '@fortawesome/free-solid-svg-icons';
-import logo from '../assets/images/imagiflix.svg';
+
+import logo from '../assets/images/flick-base-logo.svg';
 import placeholderUser from '../assets/images/avatar.jpeg';
 
-const NavBar = () => (
-	<nav className='absolute top-0 left-0 grid grid-cols-2 w-full p-8'>
-		<div className='justify-self-start grid grid-cols-2 gap-4 items-center'>
-			<h1 className='hidden'>Imagiflix</h1>
-			<img src={logo} alt='Flick Base Logo'/>
+import './NavBar.css';
 
-			<ul className='grid grid-flow-col gap-4'>
-				<li className='font-bold'>Home</li>
-				<li>
-					<a href='#series'>Series</a>
-				</li>
-				<li>
-					<a href='#moveis'>Movies</a>
-				</li>
-			</ul>
-		</div>
+const NavBar = () => {
+	const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-		<div className='justify-self-end flex justify-items-end items-center'>
-			<form className='relative w-64'>
-				<input
-					className='w-full bg-black border rounded py-1 px-3 transition-all duration-300 ease-in-out opacity-0 hover:opacity-100 focus:opacity-100'
-					type='text'
-					placeholder='titles, people and genres'
-				/>
-				<button className='absolute right-2 py-1'>
-					<FontAwesomeIcon icon={faSearch} />
-				</button>
-			</form>
-			<div className='flex ml-4'>
-				<img src={placeholderUser} alt="User's profile" />
-				<button>
-					<FontAwesomeIcon className='ml-2' icon={faCaretDown} />
-				</button>
-				<u className='hidden'>
+	const handleClick = () => {
+		setIsMenuOpen(!isMenuOpen);
+	};
+
+	return (
+		<nav className='navbar absolute top-0 left-0 grid grid-cols-2 w-full p-8'>
+			<div className='justify-self-start flex flex-row gap-4 items-center'>
+				<h1 className='hidden'>Flick Base</h1>
+				<img className='' src={logo} alt='Flick Base Logo' />
+
+				<ul className=' grid grid-flow-col gap-4'>
+					<li className='font-bold'>Home</li>
 					<li>
-						<a href='#account'>Account</a>
+						<a href='#series'>Series</a>
 					</li>
 					<li>
-						<a href='#logout'>Sign Out</a>
+						<a href='#moveis'>Movies</a>
 					</li>
-				</u>
+				</ul>
 			</div>
-		</div>
-	</nav>
-);
+
+			<div className='justify-self-end flex justify-items-end items-center'>
+				<form className='relative w-64'>
+					<input
+						className='w-full bg-black border rounded py-1 px-3 transition-all duration-300 ease-in-out opacity-0 hover:opacity-100 focus:opacity-100'
+						type='text'
+						placeholder='titles, people and genres'
+					/>
+					<button className='absolute right-2 py-1' onClick={(e) => e.preventDefault()}>
+						<FontAwesomeIcon icon={faSearch} />
+					</button>
+				</form>
+				<div className='relative flex ml-4'>
+					<img onClick={handleClick} src={placeholderUser} alt="User's profile" />
+					<button onClick={handleClick}>
+						<FontAwesomeIcon className='ml-2' icon={faCaretDown} />
+					</button>
+					<ul
+						className={`absolute mt-10 top-0 right-0 w-32 bg-black rounded p-3 transition-all duration-500 ease-in-out ${
+							!isMenuOpen && 'opacity-0 invisible'
+						}`}
+					>
+						<li className='mb-2'>
+							<a href='#account' onClick={handleClick}>
+								Account
+							</a>
+						</li>
+						<li>
+							<a href='#logout' onClick={handleClick}>
+								Sign Out
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	);
+};
 
 export default NavBar;
