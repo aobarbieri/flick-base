@@ -51,5 +51,7 @@ Tools used in the project:
 - Typescript
 - FontAwesome
 - React Slick
+    v1.23
     React slick is a carousel component built with React.
-    https://github.com/akiran/react-slick and https://react-slick.neostack.com/
+    https://github.com/akiran/react-slick
+    https://react-slick.neostack.com/
