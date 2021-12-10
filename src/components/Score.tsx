@@ -11,11 +11,14 @@ const Score = ({ value = 5 }: { value?: string | number }) => {
 			return 'border-red-400';
 		}
 	};
+
+	const score = Math.floor(typeof value == 'string' ? parseFloat(value) : value);
+
 	return (
 		<span
-			className={`score text-center inline-block mx-2 border-4 bg-black bg-opacity-75 py-2 px-3 rounded-full ${getBorderColor()}`}
+			className={`score text-center inline-block my-4 mx-2 py-2 border-4 bg-black bg-opacity-75 rounded-full ${getBorderColor()}`}
 		>
-			{value}
+			{score}
 		</span>
 	);
 };
