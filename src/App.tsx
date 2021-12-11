@@ -15,6 +15,7 @@ const App = () => {
 
 	const [movies, setMovies] = useState<any>();
 	const [series, setSeries] = useState<any>();
+  const [loading, setLoading] = useState(true);
 
 	useEffect(() => {
 		const fetchData = async () => {
@@ -25,6 +26,8 @@ const App = () => {
 			const series = await fetch(`${URL}/discover/tv${APISTRING}&sort_by=popularity.desc`);
 			const seriesData = await series.json();
 			setSeries(seriesData);
+
+      setLoading(false);
 		};
 
 		fetchData();
@@ -42,12 +45,17 @@ const App = () => {
 
 	return (
 		<div className='m-auto antialised font-sans bg-black text-white'>
-			<Hero {...getFeaturedMovie()} />
+      {loading && <h1>Loading</h1>}
+      {!loading && (
+			<>
+      <Hero {...getFeaturedMovie()} />
 			<NavBar />
 			<Carousel title='Most Popular Movies' data={getMovieList()} />
 			<Carousel title='Most Popular TV Shows' data={series?.results}/>
 			<Carousel title='Placeholder' />
       <Footer />
+      </>
+      )}
 		</div>
 	);
 };

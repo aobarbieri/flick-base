@@ -1,31 +1,31 @@
 import React from 'react';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook, faInstagram, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
+import { faFacebookSquare, faInstagram, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
 
 const Footer = () => {
 	const today = new Date();
 
 	return (
-		<footer>
-			<FontAwesomeIcon icon={faFacebook} />
-			<FontAwesomeIcon icon={faInstagram} />
-			<FontAwesomeIcon icon={faTwitter} />
-			<FontAwesomeIcon icon={faYoutube} />
-			<div>
-				<a href='#'>Audio and subtitles</a>
-				<a href='#'>Audio description</a>
-				<a href='#'>Help Center</a>
-				<a href='#'>Pre-paid card</a>
-				<a href='#'>Press</a>
-				<a href='#'>Investor relations</a>
-				<a href='#'>Careers</a>
-				<a href='#'>Terms of use</a>
-				<a href='#'>Privacy</a>
-				<a href='#'>Legal notices</a>
-				<a href='#'>Cookies preferences</a>
-				<a href='#'>Corporate information</a>
-				<a href='#'>Contact</a>
+		<footer className='mt-24 pl-32 pb-4 text-gray-600 text-sm'>
+			<FontAwesomeIcon className='mr-4 hover:text-white' icon={faFacebookSquare} size='2x' />
+			<FontAwesomeIcon className='mr-4 hover:text-white' icon={faInstagram} size='2x' />
+			<FontAwesomeIcon className='mr-4 hover:text-white' icon={faTwitter} size='2x' />
+			<FontAwesomeIcon className='hover:text-white' icon={faYoutube} size='2x' />
+			<div className='grid grid-cols-4 my-8'>
+				<a className='hover:text-white' href='#'>Audio and subtitles</a>
+				<a className='hover:text-white' href='#'>Audio description</a>
+				<a className='hover:text-white' href='#'>Help Center</a>
+				<a className='hover:text-white' href='#'>Pre-paid card</a>
+				<a className='hover:text-white' href='#'>Press</a>
+				<a className='hover:text-white' href='#'>Investor relations</a>
+				<a className='hover:text-white' href='#'>Careers</a>
+				<a className='hover:text-white' href='#'>Terms of use</a>
+				<a className='hover:text-white' href='#'>Privacy</a>
+				<a className='hover:text-white' href='#'>Legal notices</a>
+				<a className='hover:text-white' href='#'>Cookies preferences</a>
+				<a className='hover:text-white' href='#'>Corporate information</a>
+				<a className='hover:text-white' href='#'>Contact</a>
 			</div>
 			<p>© 2020 - {today.getFullYear()} flickbase, Inc.</p>
 		</footer>
