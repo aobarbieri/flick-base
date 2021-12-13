@@ -19,7 +19,7 @@ const Carousel = ({ title = 'Highlighted Movies', data = mockData }: CarouselDat
 		right,
 	}
 
-	const SlickArrow = ({ direction, onClick }: { direction: Direction; onClick?: () => {}; }) => (
+	const SlickArrow = ({ direction, onClick }: { direction: Direction; onClick?: () => void; }) => (
 		<button
 			type='button'
 			className={`absolute w-16 h-full top-0 z-10 bg-black bg-opacity-50 ${direction ? 'right-0' : 'left-0'}`} onClick={onClick}

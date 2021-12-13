@@ -55,3 +55,4 @@ Tools used in the project:
     https://github.com/akiran/react-slick
     https://react-slick.neostack.com/
 - API The Movie DB v3
+- Emitter from Facebook
