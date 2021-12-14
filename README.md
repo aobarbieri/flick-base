@@ -8,6 +8,9 @@ It offers a library with the most popular filmes and television series using The
 - Typescript
 - Tailwind, v2.2.16
 - FontAwesome
-- React Slick. React slick is a carousel component built with React. (https://github.com/akiran/react-slick),(https://react-slick.neostack.com/)
+- React Slick. 
+  React slick is a carousel component built with React. 
+  https://github.com/akiran/react-slick
+  https://react-slick.neostack.com/
 - The Movie DB v3 - API
 - Emitter, EventEmitter from Facebook
