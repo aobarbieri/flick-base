@@ -81,11 +81,10 @@ const App = () => {
 					<NavBar />
 					<Carousel title='Most Popular Movies' data={getMovieList()} />
 					<Carousel title='Most Popular TV Shows' data={series?.results} />
-		
 				</>
 			)}
 			<Footer />
-			{ title && <Modal {...title}/> }
+			{title && <Modal {...title} />}
 		</div>
 	);
 };

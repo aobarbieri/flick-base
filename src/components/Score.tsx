@@ -1,4 +1,3 @@
-import React from 'react';
 import './Score.css';
 
 const Score = ({ value = 5 }: { value?: string | number }) => {

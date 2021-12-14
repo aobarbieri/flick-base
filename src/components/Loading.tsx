@@ -1,4 +1,3 @@
-import React from 'react';
 
 const Loading = () => (
 	<div className='w-full h-screen bg-black grid place-items-center'>

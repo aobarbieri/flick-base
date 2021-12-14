@@ -1,11 +1,8 @@
 import React, { useState } from 'react';
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faCaretDown } from '@fortawesome/free-solid-svg-icons';
-
 import logo from '../assets/images/flickbase-logo.svg';
 import placeholderUser from '../assets/images/avatar.jpeg';
-
 import './NavBar.css';
 
 const NavBar = () => {
@@ -18,10 +15,8 @@ const NavBar = () => {
 	return (
 		<nav className='navbar absolute top-0 left-0 grid grid-cols-2 w-full p-8'>
 			<div className='justify-self-start flex flex-row gap-4 items-center'>
-				<h1 className='hidden'>Flick Base</h1>
-				<img className='w-48' src={logo} alt='Flick Base Logo' />
-
-				<ul className=' grid grid-flow-col gap-8'>
+				<img className='w-32 md:w-48' src={logo} alt='Flick Base Logo' />
+				<ul className='invisible md:visible grid grid-flow-col gap-8'>
 					<li className='ml-6 font-bold'>Home</li>
 					<li>
 						<a href='#series'>Series</a>

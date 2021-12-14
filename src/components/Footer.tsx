@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookSquare, faInstagram, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
 
@@ -7,12 +5,12 @@ const Footer = () => {
 	const today = new Date();
 
 	return (
-		<footer className='mt-24 pl-32 pb-4 text-gray-600 text-sm'>
+		<footer className='mt-18 md:px-12 lg:px-32 xl:px-72 pb-4 text-center text-gray-600 text-sm xl:text-lg'>
 			<FontAwesomeIcon className='mr-4 hover:text-white' icon={faFacebookSquare} size='2x' />
 			<FontAwesomeIcon className='mr-4 hover:text-white' icon={faInstagram} size='2x' />
 			<FontAwesomeIcon className='mr-4 hover:text-white' icon={faTwitter} size='2x' />
 			<FontAwesomeIcon className='hover:text-white' icon={faYoutube} size='2x' />
-			<div className='grid grid-cols-4 my-8'>
+			<div className='grid justify-items-center md:justify-items-start md:grid-cols-4 my-8'>
 				<a className='hover:text-white' href='#'>Audio and subtitles</a>
 				<a className='hover:text-white' href='#'>Audio description</a>
 				<a className='hover:text-white' href='#'>Help Center</a>

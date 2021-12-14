@@ -1,11 +1,8 @@
-import React from 'react';
 import Slick from 'react-slick';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
-
 import mockData, { Movie } from '../data/mock';
 import Poster from './Poster';
-
 import './Carousel.css';
 
 interface CarouselData {
@@ -19,10 +16,11 @@ const Carousel = ({ title = 'Highlighted Movies', data = mockData }: CarouselDat
 		right,
 	}
 
-	const SlickArrow = ({ direction, onClick }: { direction: Direction; onClick?: () => void; }) => (
+	const SlickArrow = ({ direction, onClick }: { direction: Direction; onClick?: () => void }) => (
 		<button
 			type='button'
-			className={`absolute w-16 h-full top-0 z-10 bg-black bg-opacity-50 ${direction ? 'right-0' : 'left-0'}`} onClick={onClick}
+			className={`absolute w-16 h-full top-0 z-10 bg-black bg-opacity-50 ${direction ? 'right-0' : 'left-0'}`}
+			onClick={onClick}
 		>
 			<FontAwesomeIcon icon={direction ? faChevronRight : faChevronLeft} size='3x' />
 		</button>
