@@ -1,7 +1,7 @@
 ![flickbase logo](https://github.com/aobarbieri/flick-base/blob/master/src/assets/images/flickbase-logo.svg?raw=true)
 
 Flickbase simulates a streaming website. 
-It offers a library with the most popular filmes and television series using The Movie DB database.
+It offers a library with the most popular filmes and television series using The Movie DB API.
 
 ## Project written using:
 - React
