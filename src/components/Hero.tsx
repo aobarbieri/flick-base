@@ -18,7 +18,7 @@ const Hero = ({ backdrop_path = null, title = 'Avengers Endgame', vote_average =
 		<img className='object-cover object-center h-auto w-full' src={backdrop_path ? `${IMAGEURL}/original/${backdrop_path}` : placeholder} alt='Highlighted Movie' />
 
 		<div className='absolute bottom-0 w-full h-full bg-gradient-to-b from-transparent to-black'></div>
-		<article className='absolute bottom-0 mb-64 px-8'>
+		<article className='absolute bottom-0 ml-12 mb-64 px-8'>
 			<p className='text-3xl'>Watch now</p>
 
 			<h2 className='text-6xl font-bold my-4'>{title}</h2>

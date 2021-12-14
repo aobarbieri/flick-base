@@ -44,7 +44,7 @@ const NavBar = () => {
 					</button>
 				</form>
 				<div className='relative flex ml-4'>
-					<img onClick={handleClick} src={placeholderUser} alt="User's profile" />
+					<img className='rounded-full' onClick={handleClick} src={placeholderUser} alt="User's profile" />
 					<button onClick={handleClick}>
 						<FontAwesomeIcon className='ml-2' icon={faCaretDown} />
 					</button>

@@ -5,6 +5,7 @@ import NavBar from './components/NavBar';
 import Carousel from './components/Carousel';
 import Footer from './components/Footer';
 import Loading from './components/Loading';
+import Modal from './components/Modal';
 
 import CONST from './data/constants';
 import emitter from './utils/eventEmitter';
@@ -47,6 +48,7 @@ const App = () => {
 
 	useEffect(() => {
 		emitter.addListener(CONST.EVENTS.PosterClick, getTitle);
+		emitter.addListener(CONST.EVENTS.ModalClose, setTitle);
 
 		const fetchData = async () => {
 			const movies = await fetch(`${URL}/discover/movie${APISTRING}&sort_by=popularity.desc`);
@@ -79,10 +81,11 @@ const App = () => {
 					<NavBar />
 					<Carousel title='Most Popular Movies' data={getMovieList()} />
 					<Carousel title='Most Popular TV Shows' data={series?.results} />
-					<Carousel title='Placeholder' />
+		
 				</>
 			)}
 			<Footer />
+			{ title && <Modal {...title}/> }
 		</div>
 	);
 };
